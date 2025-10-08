@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Identication Card Generator</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <!-- === Header Section ===== -->
+     <header>
+        <div class="header">
+            <div class="flag">
+                <img src="./Images/Liberia-flasg.jpg" alt="National Flag">
+            </div>
+            <div>
+                <h1>REPUBLIC OF LIBERIA</h1>
+                <p>National Identification Card</p>
+            </div>
+            <div class="seal">
+                <img src="./Images/seal-removebg-preview.png" alt="National Seal">
+            </div>
+        </div>
+     </header>
+    <!-- ==== Header Section ends here ===== -->
+
+    <!-- ===== Form Data Info Section ====== -->
+     <section class="form-section" id="formField">
+         <h2>Fill in your Information</h2>
+         <form action="#" id="idForm">
+
+            <div class="form-group">
+                <label for="photo">Upload photo:</label>
+                <input type="file" name="user-photo" id="userPhotoUpload" accept="image/*" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" placeholder="Enter surname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="firstname">Firstname:</label>
+                <input type="text" id="firstname" placeholder="Enter firstname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="middlename">Middlename:</label>
+                <input type="text" id="middlename" placeholder="Enter middlename">
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select id="status" required>
+                <option value="">-- Select Status --</option>
+                <option value="Citizen">Citizen</option>
+                <option value="Alien">Alien</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Sex:</label>
+                <select id="sex" required>
+                    <option value="">-- Select Sex --</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="height">Height:</label>
+                <input type="text" id="height" placeholder="e.g., 5' 6" required>
+            </div>
+            <div class="form-group">
+                <label for="expiry">Expiry Date:</label>
+                <input type="date" id="expiry" required>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="generateBtn">Generate ID</button>
+            </div>
+         </form>
+     </section>
+
+     <!-- ===== Front and Back section ====== -->
+     <section class="id-display" id="idDisplay">
+        <!-- <h2 class="card-heading">Your Digital Liberia National ID</h2> -->
+
+        <div class="frontBackContainer">
+            <!-- Front of the National Card -->
+            <div class="id-card">
+                <div class="card-header">
+                    <div class="flag">
+                        <img src="./Images/Liberia-flasg.jpg" alt="National Flag">
+                    </div>
+                    <div>
+                        <h3>REPUBLIC OF LIBERIA</h3>
+                        <p>National Identification Card</p>
+                    </div>
+                    <div class="seal">
+                        <img src="./Images/seal-removebg-preview.png" alt="National Seal">
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="photo-area">
+                        <img id="userPhotoDisplay" alt="User Photo" class="profileImg">
+                    </div>
+        
+                    <div class="details">
+                        <p>Surname:<strong><span id="displaySurname"></span></strong></p>
+                        <p>Firstname:<strong><span id="displayFirstname"></span></strong></p>
+                        <p>Middlename: <strong><span id="displayMiddlename"></span></strong></p>
+                        <p>Date of Birth: <strong><span id="displayDOB"></span></strong></p>
+
+                        <div class="middleDisplay">
+                            <p>Status:<br> <strong><span id="displayStatus"></span></strong></p>
+                            <p>Sex: <br><strong><span id="displaySex"></span></strong></p>
+                            <p>Height: <br><strong><span id="displayHeight"></span></strong></p>
+                        </div>
+                        <div class="middleDisplay" style="gap: 60px;">
+                            <p>NIN: <br><strong><span id="displayNIN"></span></strong></p>
+                            <p>Expiry: <br><strong><span id="displayExpiry"></span></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- BACK OF THE ID CARD -->
+            <div class="id-card ">
+                <div class="back-content">
+                    <h3>REPUBLIC OF LIBERIA</h3>
+                    <p>National Identication Registry</p>
+                    <div id="qrCode"></div>
+                </div>
+            </div>
+        </div>
+        <div class="action-buttons buttons">
+            <button type="button" id="clearData" class="btn-clear">Clear Data</button>
+            <button id="editData">Edit Information</button>
+            <button id="printCard">🖨️ Print ID</button>
+            <button id="downloadCard">⬇️ Download ID</button>
+        </div>
+     </section>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

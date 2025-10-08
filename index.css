@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&family=Lexend:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --primary: #5010c0;
+    --bg: #f4f6fa;
+    --text-dark: #222;
+    --text-light: #666;
+    --card-bg: #fff;
+    --border-radius: 16px;
+    --shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+    padding: 1.2rem;
+}
+h1, h2 {
+    font-size: 1.5rem;
+}
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.769), rgba(0,0,0,0.3)), url('./Images/background.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 30px;
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.header img {
+    width: 90px;
+}
+.header h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 3rem;
+    text-shadow: 1px 2px 3px rgba(0,0,0,0.5);
+    margin-bottom: -17px;
+}
+.header p{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 30px;
+    background-color: white;
+    color: rgb(189, 1, 1);
+    display: inline;
+    text-align: center;
+    margin-left: 50px;
+}
+.form-section {
+    background: var(--card-bg);
+    padding: 25px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+.form-section h2{
+    text-align: center;
+    font-size: 2rem;
+    color: #1b0556;
+    text-transform: uppercase;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+label {
+    font-weight: 500;
+}
+input, #sex, #status {
+    padding: 10px;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    border: 2px solid #ccc;
+    transition: .5s all ease-in-out;
+}
+input:focus {
+    border-color: var(--primary);
+}
+#generateBtn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+    margin: 20px 0;
+    width: 100%;
+    font-size: 20px;
+}
+button {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+    margin: 20px 0;
+
+}
+button:hover {
+    background: #0d74d4;
+}
+/* .card-section {
+    display: none;
+    text-align: center;
+} */
+/* Front and Back Card styling */
+/* .card-heading{
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+} */
+.profileImg {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    object-fit: contain;
+}
+.id-display {
+    display: none;
+}
+.frontBackContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.id-card {
+    width: 43%;
+    height: 330px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.503), rgba(0,0,0,0.503)), url('./Images/backimage.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 3px 5px 10px rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: relative;
+}
+.card-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card-header img{
+    width: 40px;
+}
+.card-header h3 {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 1px 5px rgb(16, 1, 182);
+    text-decoration: solid;
+    font-family: 'Oswald';
+    margin-bottom: -12px;
+}
+.card-header p {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    display: inline;
+    text-transform: uppercase;
+    padding: 0 5px;
+    font-weight: bold;
+    background-color: white;
+    color: rgb(189, 1, 1);
+    border: 1.5px solid rgb(1, 1, 165);
+}
+.card-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.details {
+    margin-top: 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.middleDisplay{
+    display: flex;
+    gap: 30px;
+}
+.details p {
+    margin: 4px 0;
+}
+.back-content {
+    text-align: center;
+    font-weight: bolder;
+}
+.back-content p{
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+#qrCode {
+    width: 250px;
+    height: 240px;
+    padding: 20px;
+    background: #eee;
+    border-radius: 8px;
+    float: right;
+}
+
+/* Print and Download Button Styling */
+.action-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#printCard, #downloadCard {
+  background: #0a8a3a;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+#printCard:hover, #downloadCard:hover {
+  background: #066e2d;
+}
+
+/* Media Query for Smaller and larger size screen */
+/* @media screen and (max-width: 760px) {
+    .frontBackContainer {
+        display: flex;
+        flex-direction: column;
+  }
+  .id-card {
+    height: 300px;
+    width: 80%;
+
+  }
+  .card-header h3{
+    font-size: 2.1rem;
+    text-align: center;
+  }
+  .card-header p {
+    margin-bottom: 18px;
+    font-size: 16px;
+    margin-left: 30px;
+ }
+}
+@media screen and (max-width: 412px) {
+  .id-card {
+    height: 300px;
+    width: 100%;
+
+  }
+  .card-header h3{
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .card-header p {
+    margin-left: 10px;
+    font-size: 7px;
+ }
+ .details p{
+    font-size: 10px;
+ }
+} */
