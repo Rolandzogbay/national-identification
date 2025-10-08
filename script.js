@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (savedData) {
     const data = JSON.parse(savedData);
     displayCard(data);   
-    form.style.display = "none"; 
+    formField.style.display = "none"; 
   } else {
     idDisplay.style.display = "none"; 
   }
